@@ -1,38 +1,66 @@
-from menuItem import menuItem
+import os
 
-"""A menu contains menuItems that allows the user to navigate the program."""
+"""A menu contains items that allows the user to navigate the program."""
 class menu:
-    """Constructor to create an item."""
 
+    SEPERATOR = "_____________________________"
+
+
+    """Constructor to create an item."""
     def __init__(self, title: str):
 
-        # Run validations to the received arguments
+        # Run validations to the received arguments.
         assert title != "" or title is not None, f"{title} is a valid title."
 
-        # Assign to self object
+        # Assign to self object.
         self.__title = title
-        self.__menuItems = dict()
+        self.__itemsByName = dict()
+        self.__itemsByPosition = dict()
 
-    # Getters and Setters
+    # Getters and Setters.
     @property
     def title(self):
         return self.__title
 
     @property
-    def menuItems(self):
-        return self.__menuItems
+    def itemsByName(self):
+        return self.__itemsByName
+
+    @property
+    def itemsByPosition(self):
+        return self.__itemsByPosition
 
     """Add a new item to the menu."""
     def addMenuItem(self, title: str, position: int):
 
-        # Check that position or title aren't already used.
-        assert title not in self.__menuItems.keys(), f"{title} already in the menu."
-        assert position not in [self.__menuItems[key].position for key in self.__menuItems.keys()], \
-            f"{position} already taken."
+        # Check that title and position are valid values.
+        assert title != "" or title is not None, f"{title} is a valid title."
+        assert position >= 0, f"{position} must not be negative."
 
-        # Add item to menu.
-        newMenuItem = menuItem(title, position)
-        self.__menuItems[newMenuItem.title] = newMenuItem
+        # Check that position or title aren't already used.
+        assert title not in self.__itemsByName.keys(), f"{title} already in the menu."
+        assert position not in self.__itemsByPosition.keys(),  f"{position} already taken."
+
+        # Position is equal to size of new size of menu.
+        assert position - 1 == len(self.__itemsByPosition.keys()), f"{position} too large."
+
+        # Add item
+        self.__itemsByName[title] = position
+        self.__itemsByPosition[position] = title
 
         return 0
 
+    """Display the menu."""
+    def displayMenu(self):
+
+        os.system('cls')
+        print(self.SEPERATOR)
+        print(str.upper(self.__title))
+        print(self.SEPERATOR)
+
+        # List out menu options.
+        for i in range(1, len(self.__itemsByPosition.keys()) + 1):
+            print(f"{i}: {self.__itemsByPosition[i]}")
+        print(self.SEPERATOR)
+
+        return input("Select an option from the above menu: ")
