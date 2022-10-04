@@ -64,3 +64,8 @@ class menu:
         print(self.SEPERATOR)
 
         return input("Select an option from the above menu: ")
+
+    """Get the name of the selected option."""
+    def getSelectionName(self, selection):
+
+        return self.itemsByPosition[int(selection)]

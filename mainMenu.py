@@ -22,8 +22,6 @@ class mainMenu(menu):
         input("Enter any key and press enter to continue: ")
         print(self.SEPERATOR)
 
-        return self.displayMenu()
-
 
     """Handles the showing of the about page of the program."""
     def aboutPage(self):
