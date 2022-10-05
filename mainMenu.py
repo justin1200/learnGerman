@@ -1,4 +1,5 @@
 from menu import menu
+from global_constants import *
 import os
 
 """This is the class that handles navigating the main menu of the program."""
@@ -11,7 +12,7 @@ class mainMenu(menu):
     """Constructor to create the main menu."""
     def __init__(self):
         # Call to super function to have access to all attributes / methods
-        super().__init__("Main Menu")
+        super().__init__(MAIN_MENU)
 
 
     """Welcome message and nagivation to main menu upon start up of program."""
