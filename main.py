@@ -8,6 +8,9 @@ from subMenu import subMenu
 from global_constants import *
 import os
 
+
+
+"""Creates all the menus and their selections."""
 def createMenus():
 
     menus = dict()
@@ -49,14 +52,11 @@ def createMenus():
     adjectivesMenu.addMenuItem(MAIN_MENU_RETURN, 1)
     menus[adjectivesMenu.title] = adjectivesMenu
 
-    #print(GameMenu.displayMenu())
-    #x = GameMenu.displayMenu()
-    #print(x)
-    #print(GameMenu.getSelectionName(x))
-    #print(GameMenu.itemsByPosition[1])
-
     return menus
 
+
+
+"""Based on user's selection find the menu, section or game to go to."""
 def findMenuOrGame(selection, menus):
 
     # Check for about page and program exit
@@ -69,7 +69,7 @@ def findMenuOrGame(selection, menus):
         return findMenuOrGame(selectionTemp, menus)
 
     # Check menus first
-    if selection == MAIN_MENU:
+    if selection == MAIN_MENU or selection == MAIN_MENU_RETURN:
         return menus[MAIN_MENU]
     elif selection == LEARN_GERMAN_WORDS_MENU:
         return menus[LEARN_GERMAN_WORDS_MENU]
@@ -82,28 +82,27 @@ def findMenuOrGame(selection, menus):
 
     # Next check games and run them
 
+
+"""Run the program by prompting the user for menu selection and processing requests."""
 def runGame(menus):
 
+    # Start at welcome message and head to main menu
     currentMenu = menus[MAIN_MENU]
     currentMenu.welcomeMessage()
 
-    selection = currentMenu.displayMenu()
-    selection = currentMenu.getSelectionName(selection)
-    currentMenu = findMenuOrGame(selection, menus)
-    print(currentMenu.title)
-    #while True:
-    #    pass
+    # Prompt user for menu selection and process request
+    while True:
+        selection = currentMenu.displayMenu()
+        selection = currentMenu.getSelectionName(selection)
+        currentMenu = findMenuOrGame(selection, menus)
+
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
+    # Create menus
     menus = createMenus()
 
+    # Run game
     runGame(menus)
-
-
-
-
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

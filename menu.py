@@ -6,6 +6,7 @@ class menu:
     SEPERATOR = "_____________________________"
 
 
+
     """Constructor to create an item."""
     def __init__(self, title: str):
 
@@ -22,13 +23,19 @@ class menu:
     def title(self):
         return self.__title
 
+
+
     @property
     def itemsByName(self):
         return self.__itemsByName
 
+
+
     @property
     def itemsByPosition(self):
         return self.__itemsByPosition
+
+
 
     """Add a new item to the menu."""
     def addMenuItem(self, title: str, position: int):
@@ -50,6 +57,8 @@ class menu:
 
         return 0
 
+
+
     """Display the menu."""
     def displayMenu(self):
 
@@ -64,6 +73,8 @@ class menu:
         print(self.SEPERATOR)
 
         return input("Select an option from the above menu: ")
+
+
 
     """Get the name of the selected option."""
     def getSelectionName(self, selection):

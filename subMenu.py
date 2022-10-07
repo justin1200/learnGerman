@@ -8,7 +8,3 @@ class subMenu(menu):
     def __init__(self, title: str):
         # Call to super function to have access to all attributes / methods
         super().__init__(title)
-
-
-
-

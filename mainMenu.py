@@ -9,10 +9,13 @@ class mainMenu(menu):
     DATE = "25-SEP-2022"
     AUTHOR = "Justin Kelley"
 
+
+
     """Constructor to create the main menu."""
     def __init__(self):
         # Call to super function to have access to all attributes / methods
         super().__init__(MAIN_MENU)
+
 
 
     """Welcome message and nagivation to main menu upon start up of program."""
@@ -22,6 +25,7 @@ class mainMenu(menu):
         print("Welcome to LEARN GERMAN!!!! This program allows you to practice your German.")
         input("Enter any key and press enter to continue: ")
         print(self.SEPERATOR)
+
 
 
     """Handles the showing of the about page of the program."""
@@ -37,6 +41,7 @@ class mainMenu(menu):
         input("Enter any key and press enter to return to the main menu: ")
 
         return self.displayMenu()
+
 
 
     """Handles the closing of the program."""
