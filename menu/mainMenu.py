@@ -1,4 +1,4 @@
-from menu import menu
+from menu.menu import menu
 from global_constants import *
 import os
 
@@ -21,10 +21,10 @@ class mainMenu(menu):
     """Welcome message and nagivation to main menu upon start up of program."""
     def welcomeMessage(self):
 
-        print(self.SEPERATOR)
+        print(SEPERATOR)
         print("Welcome to LEARN GERMAN!!!! This program allows you to practice your German.")
         input("Enter any key and press enter to continue: ")
-        print(self.SEPERATOR)
+        print(SEPERATOR)
 
 
 
@@ -32,12 +32,12 @@ class mainMenu(menu):
     def aboutPage(self):
 
         os.system('cls')
-        print(self.SEPERATOR)
+        print(SEPERATOR)
         print("Learn German")
         print(f"Author: {self.AUTHOR}, Version: {self.VERSION}, Date: {self.DATE}")
         print("This is a Python program that allows the user to practice their German.")
         print("The user can learn varies things including words, tense and cases.")
-        print(self.SEPERATOR)
+        print(SEPERATOR)
         input("Enter any key and press enter to return to the main menu: ")
 
         return self.displayMenu()
@@ -46,10 +46,10 @@ class mainMenu(menu):
 
     """Handles the closing of the program."""
     def exitProgram(self):
-        print(self.SEPERATOR)
+        print(SEPERATOR)
         print("Goodbye!!! Hope you learnt something!")
         input("Enter any key and press enter to exit program: ")
-        print(self.SEPERATOR)
+        print(SEPERATOR)
 
         exit(0)
 

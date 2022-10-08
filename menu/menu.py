@@ -1,11 +1,8 @@
 import os
+from global_constants import *
 
 """A menu contains items that allows the user to navigate the program."""
 class menu:
-
-    SEPERATOR = "_____________________________"
-
-
 
     """Constructor to create an item."""
     def __init__(self, title: str):
@@ -18,18 +15,16 @@ class menu:
         self.__itemsByName = dict()
         self.__itemsByPosition = dict()
 
+
+
     # Getters and Setters.
     @property
     def title(self):
         return self.__title
 
-
-
     @property
     def itemsByName(self):
         return self.__itemsByName
-
-
 
     @property
     def itemsByPosition(self):
@@ -63,14 +58,14 @@ class menu:
     def displayMenu(self):
 
         os.system('cls')
-        print(self.SEPERATOR)
+        print(SEPERATOR)
         print(str.upper(self.__title))
-        print(self.SEPERATOR)
+        print(SEPERATOR)
 
         # List out menu options.
         for i in range(1, len(self.__itemsByPosition.keys()) + 1):
             print(f"{i}: {self.__itemsByPosition[i]}")
-        print(self.SEPERATOR)
+        print(SEPERATOR)
 
         return input("Select an option from the above menu: ")
 

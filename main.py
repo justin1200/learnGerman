@@ -3,12 +3,10 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-from mainMenu import mainMenu
-from subMenu import subMenu
+from menu.mainMenu import mainMenu
+from menu.subMenu import subMenu
+from game.wordGame import wordGame
 from global_constants import *
-import os
-
-
 
 """Creates all the menus and their selections."""
 def createMenus():
@@ -100,6 +98,12 @@ def runGame(menus):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+
+    x = wordGame("a", "b", "c")
+
+    x.readCSV("csv\\germanWords\\theWorkplace.csv")
+    x.printCSVInfo()
+    x.welcome()
 
     # Create menus
     menus = createMenus()

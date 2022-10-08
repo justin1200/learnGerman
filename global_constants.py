@@ -23,3 +23,6 @@ CLOTHING = "Clothing"
 # Nominative, accusative, dative and genitive cases games
 
 # Adjectives games
+
+# Formatting
+SEPERATOR = "_____________________________"

@@ -1,5 +1,4 @@
-from menu import menu
-import os
+from menu.menu import menu
 
 """This is the class that handles navigating the main menu of the program."""
 class subMenu(menu):
