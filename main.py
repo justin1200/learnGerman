@@ -52,10 +52,19 @@ def createMenus():
 
     return menus
 
+def createGames():
 
+    games = dict()
+
+    # Learn German words game
+    theWorkplace = wordGame(THE_WORKPLACE, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, THE_WORKPLACE_GREETING)
+    theWorkplace.readCSV("csv\\germanWords\\theWorkplace.csv", "english", "german")
+    games[theWorkplace.title] = theWorkplace
+
+    return games
 
 """Based on user's selection find the menu, section or game to go to."""
-def findMenuOrGame(selection, menus):
+def findMenuOrGame(selection, menus, games):
 
     # Check for about page and program exit
     if selection == PROGRAM_EXIT:
@@ -79,10 +88,14 @@ def findMenuOrGame(selection, menus):
         return menus[ADJECTIVES_MENU]
 
     # Next check games and run them
+    if selection == THE_WORKPLACE:
+        games[THE_WORKPLACE].playGame()
+        return menus[LEARN_GERMAN_WORDS_MENU]
+
 
 
 """Run the program by prompting the user for menu selection and processing requests."""
-def runGame(menus):
+def runGame(menus, games):
 
     # Start at welcome message and head to main menu
     currentMenu = menus[MAIN_MENU]
@@ -92,21 +105,16 @@ def runGame(menus):
     while True:
         selection = currentMenu.displayMenu()
         selection = currentMenu.getSelectionName(selection)
-        currentMenu = findMenuOrGame(selection, menus)
+        currentMenu = findMenuOrGame(selection, menus, games)
 
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    x = wordGame("a", "b", "c")
-
-    x.readCSV("csv\\germanWords\\theWorkplace.csv")
-    x.printCSVInfo()
-    x.welcome()
-
-    # Create menus
+    # Create menus and games
     menus = createMenus()
+    games = createGames()
 
     # Run game
-    runGame(menus)
+    runGame(menus, games)

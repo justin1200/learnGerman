@@ -1,5 +1,8 @@
 import csv
 from global_constants import *
+from random import seed
+from random import randint
+seed()
 
 """This class acts for handling the common functionality for any game."""
 class game():
@@ -38,9 +41,8 @@ class game():
 
 
     """Reads the information from the csv to generate the questions and correct answers for the game."""
-    def readCSV(self, file):
+    def readCSV(self, file, col1, col2):
 
-        print(file)
         # Read data from the file.
         with open(file, 'r') as f:
             reader = csv.DictReader(f)
@@ -49,9 +51,9 @@ class game():
         # Create items from the file.
         n = 0
         for row in rows:
-            self.__answersByColumnOne[row["german"]] = row["english"]
-            self.__answersByColumnTwo[row["english"]] = row["german"]
-            self.__answersByNumber[n] = [row["german"], row["english"]]
+            self.__answersByColumnOne[row[col1]] = row[col2]
+            self.__answersByColumnTwo[row[col2]] = row[col1]
+            self.__answersByNumber[n] = [row[col1], row[col2]]
             n = n + 1
 
 
@@ -62,4 +64,11 @@ class game():
         for key in self.__answersByColumnOne.keys():
             print(f"{key}: {self.__answersByColumnOne[key]}")
 
+
+
+    """Get a random number between min amd mix."""
+    @staticmethod
+    def getNum(min, max):
+
+        return randint(min, max)
 

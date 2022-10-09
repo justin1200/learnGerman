@@ -34,7 +34,18 @@ class wordGame(game):
     """Runs the functionality for playing and ending the game."""
     def playGame(self):
 
+        answer = ""
+
+        # Welcome user
         self.welcome()
+
+        # Play game rounds until prompted to return to menu.
+        while (answer != "*"):
+            num = self.getNum(0, len(self.answersByNumber))
+            answer = self.playRound(num)
+
+        return answer
+
 
 
     "Prints the welcome message of the game."
@@ -46,7 +57,33 @@ class wordGame(game):
         print(SEPERATOR)
         print(f"{self.__welcomeMessage}")
         print(SEPERATOR)
+        input("Enter any key to continue. ")
 
-    def playRound(self):
 
-        pass
+
+    "Runs a single round of the game by asking the user a question."
+    def playRound(self, num):
+
+        question_word = self.answersByNumber[num][0]
+        answer_word = self.answersByNumber[num][1]
+        correct = False
+        answer = ""
+
+        # Ask user a question, get an answer and check it.
+        while not correct:
+            # Ask question and wait for answer
+            correct = False
+            os.system('cls')
+            answer = str(input(f"For {question_word}, {self.__instruction}.\n Use ! for special characters such as" +
+                               f" 'a!' for ä. Press * to return to the game menu: "))
+
+            # Check answer
+            if answer == "*":
+                return answer
+            elif (answer_word == answer):
+                correct = True
+                input("\n\nCorrect answer!! Enter any key to continue. ")
+            else:
+                input(f"\n\nWrong answer!!! {answer_word} is correct! Try again! Enter any key to continue. ")
+
+        return answer

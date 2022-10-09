@@ -11,8 +11,13 @@ PROGRAM_EXIT = "Exit Program"
 MAIN_MENU_RETURN = "Return to Main Menu"
 
 # Learn German word games
+LEARN_GERMAN_WORDS_MENU_INSTRUCTION = "what is it in German"
 GREETINGS = "Greetings"
+
 THE_WORKPLACE = "The Workplace"
+THE_WORKPLACE_GREETING = "In this game you are given English words and you have to write\n" + \
+            "it in English. The topic is the workplace."
+
 TRAVELLING = "Travelling"
 FOOD_EATING_AND_DRINKING = "Food, Eating and Drinking"
 THE_HOME = "The Home"
