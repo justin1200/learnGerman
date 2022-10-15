@@ -1,0 +1,2 @@
+d=dative
+a-accusative
