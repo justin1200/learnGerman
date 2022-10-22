@@ -1,54 +1,139 @@
 german,english
-das Telefon,the telephone
-das Regal,the shelf
-der Stift,the pen
-der Bleistift,the pencil
-der Kugelschreiber,the ball-point pen
-das Lineal,the ruler
-der Locher,the hole punch
-der Tacker,the stapler
-die Schere,the scissors
-der Radiergummi,the eraser
-der Taschenrechner,the pocket calculator
-die Aktentasche,the briefcase
-der Notizblock,the notepad
-der Schreibblock,the writing pad
-der Brief,the letter
-der Bericht,the report
-der Kalender,the calendar
-der Terminkalender,the diary
-der Schreibtish,the desk
-der Drehstuhl,the swivel chair
-das Handy,the mobile phone
-der Computer,the computer
-der Drucker,the printer
-der Ablagekorb,the filling tray
-der Papierkorb,the wastepaper basket
-der Aktenschrank,the filling cabient
-der Aktenordner,the file
-das Buch,the book
-das Briefpapier,the stationary
-die Bu!roklammer,the paperclip
-das Textverarbeitungsprogramm,the word processor
-der Cloud-Speicher,the cloud storage
-die Pra!sentation,the presentation
-die Gescha!ftszeiten,the work hours
-das kopiergera!t,the photocopier
-der Konferenzraum,the conference room
-die cafe!teria,the cafeteria
-der Stehschreitisch,the standing desk
-die Kabine,the cubicle
-das produckt,the product
-das Unternehmen,the business
-die Kosten,the cost
-die Maus,the mouse
-die Tastatur,the keyboard
-der Lautsprecher,the loudspeaker
-der Stuhl,the char
-die Kaffeemaschine,the coffee machine
-die Lampe,the lamp
-die Brille,the glasses
-das Dokument,the document
-das Foto,the photo
-der Bildschirm,the screen
-die Uhr,the watch
+Der Tisch,The Table
+Der Stuhl,The Chair
+Das Fru!hstu!ck,The Breakfest
+Das Mittagessen,The Lunch
+Das Abendessen,The Dinner
+Die Dessert,The Dessert
+Die Rechnung,The Bill
+Das Restaurant,The Restaurant
+Das Messer,The Knife
+Die Gabel,The Fork
+Der Lo!ffel,The Spoon
+Der Teller,The Plate
+Die Schu!ssel,The Bowel
+Der Schlu!ssel,The Key
+Die Ku!che,The Kitchen
+Das Esszimmer,The Dinning Room
+Das Essen,The Food
+Schneiden,To Cut
+Mischen,To Mix
+Aufheizen,To Heat
+Braten,To Fry
+Grillen,To Grill
+Backen,To Bake
+Ru!hren,To Stir
+Kochen,to cook
+Putzen,To Clean
+Waschen,To Wash
+Wischen,To Wipe off
+Abbru!hen,Boil Shortly
+Aufkochen,Bring to Boil
+Der Ku!chentheke,The Kitchen Counter
+Das Waschbecken,The Basin
+Das Geschirrspu!lmittel,The dishwashing detergent
+Die Geschirrspu!lmaschine,The dishwasher
+Das Geschirrtuch,The dish cloth
+Der Herd,The Stove
+Der Ofen,The Oven
+Die Mikrowelle,The Microwave
+Der Toaster,The Toaster
+Der Ku!hlschrank,The Fridge
+Der Gefrierschrank,The Freezer
+Der Ku!chenschrank,The Kitchen Cabinet
+Das Glas,The Glass
+Die Flasche,The Bottle
+Einschenken,To Pour
+Das Geschirr,The Dishes
+Der Topf,The Pot
+Die Pfanne,The Pan
+Die Gewu!rze,The Spices
+Das Bro!tchen,Bread rolls
+Das Weis!brot,White bread
+Die Butter,Butter
+Die Margarine,Margarine
+Der Joghurt,Yoghurt
+Der Honig,Honey
+Das Ei,Egg
+Die Eier,The Eggs
+Das Ru!hrei,Scrambled Egg
+Das Spiegelsei,Fried Egg
+Der Ka!se,Cheese
+Die Wurst,Sausage
+Die Marmelade,Jam/Marmalade
+Der Schinken,Ham
+Der Kaffee,Coffee
+Der Tee,Tea
+Die Milch,Milk
+Der Salat,Salad
+Die Kartoffel,Potato
+Die Bratkartoffel,Fried Potato
+Das Kartoffelpu!ree,Mashed Potato
+Die Pommes Frites,French Fries
+Das Gemu!se,Vegetables
+Der Blumenkohl,Cauliflower
+Die Tomate,Tomato
+Der Spinat,Spinach
+Der Kohl,Cabbage
+Der Mais,Sweetcorn
+Der Spargel,Asparagus
+Der Pilz,Mushrooms
+Die Karotte,Carrot
+Die Zwiebel,Onion
+Die Erbse,Peas
+Die Bohne,Beans
+Der Lauch,Leek
+Der Mu!sli, The Muesli
+Das Fleisch,Meat
+Das Rindfleisch,Beef
+Das Schweinefleisch,Pork
+Das Kalbfleisch,Veal
+Das Geflu!gel,Poultry
+Der Fisch,Fish
+Das Ha!hnchen,Chicken
+Das Lamm,Lamb
+Der Speck,Bacon
+Das Schnitzel,Austrian Style fried slice of meat
+Die Spa!tzle,South German-style pasta)
+Die Brezel,Pretzel
+Der Kno!del,Dumplings
+Der Reis,Rice
+Die Nudeln,Pasta
+Das Mehl,Flour
+Der Essig,Vinegar
+Das O!l,Oil
+Das Brot,Bread
+Die Wurst,Sausage
+Der Lachs,Salmon
+Der Senf,Mustard
+Das Ketchup,Ketchup
+Die Gurke,Gherkins
+Das Bier,Beer
+Der Wein,Wine
+Das Wasser,Water
+Das Salz,Salt
+Der Pfeffer,Pepper
+Die Schokolade,Chocolate
+Der Kuchen,Cake
+Das Bonbon,Small sweet or dessert
+Die Nuss,Nut
+Der Keks,Cookie
+Das Eis,Ice cream
+Die Sahne,Cream
+Der Zucker,Sugar
+Die Su!s!igkeiten,Small sweet-things
+Die Rosine,Raisins
+Der Su!s!stoff,Sweetener
+Das Obst,Fruit
+Der Apfel,Apple
+Die Birne,Pear
+Die Banane,Banana
+Die Orange,Orange
+Die Zitrone,Lemon
+Der Pfirsich,Peach
+Die Pflaume,Plum
+Die Traube,Grape
+Die Erdbeere,Strawberry
+Die Himbeere,Raspberry
+Die Kirsche,Cherry
+Die Pizza,The Pizza
