@@ -31,32 +31,98 @@ def createMenus():
 
     # Past, present and future tense menu
     tensesMenu = subMenu(TENSES_MENU)
-    tensesMenu.addMenuItem(MAIN_MENU_RETURN, 1)
+    tensesMenu.addMenuItem(PERFECT_PAST, 1)
+    tensesMenu.addMenuItem(PRESENT_TENSE_ER_SIE_ES, 2)
+    tensesMenu.addMenuItem(SIMPLE_PAST, 3)
+    tensesMenu.addMenuItem(MAIN_MENU_RETURN, 4)
     menus[tensesMenu.title] = tensesMenu
 
 
     # Nominative, accusative, dative and genitive cases menu
     casesMenu = subMenu(CASES_MENU)
-    casesMenu.addMenuItem(MAIN_MENU_RETURN, 1)
+    casesMenu.addMenuItem(PREPOSITIONS, 1)
+    casesMenu.addMenuItem(VERBS, 2)
+    casesMenu.addMenuItem(MAIN_MENU_RETURN, 3)
     menus[casesMenu.title] = casesMenu
 
     # Adjectives menu
     adjectivesMenu = subMenu(ADJECTIVES_MENU)
-    adjectivesMenu.addMenuItem(MAIN_MENU_RETURN, 1)
+    adjectivesMenu.addMenuItem(SUPERLATIVE, 1)
+    adjectivesMenu.addMenuItem(COMPARATIVE, 2)
+    adjectivesMenu.addMenuItem(MAIN_MENU_RETURN, 3)
     menus[adjectivesMenu.title] = adjectivesMenu
 
     return menus
+
+
 
 def createGames():
 
     games = dict()
 
-    # Learn German words game
+    # Learn German words games
     theWorkplace = wordGame(THE_WORKPLACE, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, THE_WORKPLACE_GREETING)
     theWorkplace.readCSV("csv\\germanWords\\theWorkplace.csv", "english", "german")
     games[theWorkplace.title] = theWorkplace
 
+    travelling = wordGame(TRAVELLING, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, TRAVELLING_GREETING)
+    travelling.readCSV("csv\\germanWords\\travelling.csv", "english", "german")
+    games[travelling.title] = travelling
+
+    food = wordGame(FOOD_EATING_AND_DRINKING, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, FOOD_EATING_AND_DRINKING_GREETING)
+    food.readCSV("csv\\germanWords\\food.csv", "english", "german")
+    games[food.title] = food
+
+    clothing = wordGame(CLOTHING, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, CLOTHING_GREETING)
+    clothing.readCSV("csv\\germanWords\\clothing.csv", "english", "german")
+    games[clothing.title] = clothing
+
+    greetings = wordGame(GREETINGS, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, GREETINGS_GREETING)
+    greetings.readCSV("csv\\germanWords\\greetings.csv", "english", "german")
+    games[greetings.title] = greetings
+
+    theHome = wordGame(THE_HOME, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, THE_HOME_GREETING)
+    theHome.readCSV("csv\\germanWords\\theHome.csv", "english", "german")
+    games[theHome.title] = theHome
+
+
+    # Tenses games
+    perfect_past = wordGame(PERFECT_PAST, PERFECT_PAST_INSTRUCTION, PERFECT_PAST_GREETING)
+    perfect_past.readCSV("csv\\tense\\perfectPast.csv", "prefectPast", "word")
+    games[perfect_past.title] = perfect_past
+
+    presentTenseErSieEs = wordGame(PRESENT_TENSE_ER_SIE_ES, PRESENT_TENSE_ER_SIE_ES_INSTRUCTION,
+                                   PRESENT_TENSE_ER_SIE_ES_GREETING)
+    presentTenseErSieEs.readCSV("csv\\tense\\presentTenseErSieEs.csv", "presentTenseErSieEs", "word")
+    games[presentTenseErSieEs.title] = presentTenseErSieEs
+
+    simeplePast = wordGame(SIMPLE_PAST, SIMPLE_PAST_INSTRUCTION, SIMPLE_PAST_GREETING)
+    simeplePast.readCSV("csv\\tense\\simplePast.csv", "simplePast", "word")
+    games[simeplePast.title] = simeplePast
+
+
+    # Cases games
+    prepositions = wordGame(PREPOSITIONS, PREPOSITIONS_INSTRUCTION, PREPOSITIONS_GREETING)
+    prepositions.readCSV("csv\\cases\\prepositions.csv", "case", "preposition")
+    games[prepositions.title] = prepositions
+
+    verbs = wordGame(VERBS, VERBS_INSTRUCTION, VERBS_GREETING)
+    verbs.readCSV("csv\\cases\\words.csv", "case", "word")
+    games[verbs.title] = verbs
+
+
+    # Adjectives games
+    superlative = wordGame(SUPERLATIVE, SUPERLATIVE_INSTRUCTION, SUPERLATIVE_GREETING)
+    superlative.readCSV("csv\\adjectives\\superlative.csv", "superlative", "word")
+    games[superlative.title] = superlative
+
+    comparative = wordGame(COMPARATIVE, COMPARATIVE_INSTRUCTION, COMPARATIVE_GREETING)
+    comparative.readCSV("csv\\adjectives\\comparative.csv", "comparative", "word")
+    games[comparative.title] = comparative
+
     return games
+
+
 
 """Based on user's selection find the menu, section or game to go to."""
 def findMenuOrGame(selection, menus, games):
@@ -70,6 +136,7 @@ def findMenuOrGame(selection, menus, games):
         selectionTemp = mainMenuTemp.getSelectionName(selectionTemp)
         return findMenuOrGame(selectionTemp, menus)
 
+
     # Check menus first
     if selection == MAIN_MENU or selection == MAIN_MENU_RETURN:
         return menus[MAIN_MENU]
@@ -82,11 +149,56 @@ def findMenuOrGame(selection, menus, games):
     elif selection == ADJECTIVES_MENU:
         return menus[ADJECTIVES_MENU]
 
-    # Next check games and run them
+
+    # Next check games and run them for learnGermanWords
     if selection == THE_WORKPLACE:
         games[THE_WORKPLACE].playGame()
         return menus[LEARN_GERMAN_WORDS_MENU]
+    elif selection == GREETINGS:
+        games[GREETINGS].playGame()
+        return menus[LEARN_GERMAN_WORDS_MENU]
+    elif selection == TRAVELLING:
+        games[TRAVELLING].playGame()
+        return menus[LEARN_GERMAN_WORDS_MENU]
+    elif selection == FOOD_EATING_AND_DRINKING:
+        games[FOOD_EATING_AND_DRINKING].playGame()
+        return menus[LEARN_GERMAN_WORDS_MENU]
+    elif selection == THE_HOME:
+        games[THE_HOME].playGame()
+        return menus[LEARN_GERMAN_WORDS_MENU]
+    elif selection == CLOTHING:
+        games[CLOTHING].playGame()
+        return menus[LEARN_GERMAN_WORDS_MENU]
 
+
+    # Next check games and run them for tense
+    if selection == PERFECT_PAST:
+        games[PERFECT_PAST].playGame()
+        return menus[TENSES_MENU]
+    elif selection == PRESENT_TENSE_ER_SIE_ES:
+        games[PRESENT_TENSE_ER_SIE_ES].playGame()
+        return menus[TENSES_MENU]
+    elif selection == SIMPLE_PAST:
+        games[SIMPLE_PAST].playGame()
+        return menus[TENSES_MENU]
+
+
+    # Next check games and run them for cases
+    if selection == PREPOSITIONS:
+        games[PREPOSITIONS].playGame()
+        return menus[CASES_MENU]
+    elif selection == VERBS:
+        games[VERBS].playGame()
+        return menus[CASES_MENU]
+
+
+    # Next check games and run them for adjectives
+    if selection == SUPERLATIVE:
+        games[SUPERLATIVE].playGame()
+        return menus[ADJECTIVES_MENU]
+    elif selection == COMPARATIVE:
+        games[COMPARATIVE].playGame()
+        return menus[ADJECTIVES_MENU]
 
 
 """Run the program by prompting the user for menu selection and processing requests."""
