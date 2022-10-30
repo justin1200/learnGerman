@@ -40,6 +40,10 @@ THE_HOME_GREETING = "In this game you are given English words and you have to wr
 CLOTHING = "Clothing"
 CLOTHING_GREETING = "In this game you are given English words and you have to write\n" + \
             "it in English. The topic is clothing."
+
+BODY = "Human body and health"
+BODY_GREETING = "In this game you are given English words and you have to write\n" + \
+            "it in English. The topic is the human body and the health."
 #endregion
 
 #region tense

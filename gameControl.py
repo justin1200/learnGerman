@@ -26,7 +26,8 @@ def createMenus():
     learnGermanWordsMenu.addMenuItem(FOOD_EATING_AND_DRINKING, 4)
     learnGermanWordsMenu.addMenuItem(THE_HOME, 5)
     learnGermanWordsMenu.addMenuItem(CLOTHING, 6)
-    learnGermanWordsMenu.addMenuItem(MAIN_MENU_RETURN, 7)
+    learnGermanWordsMenu.addMenuItem(BODY, 7)
+    learnGermanWordsMenu.addMenuItem(MAIN_MENU_RETURN, 8)
     menus[learnGermanWordsMenu.title] = learnGermanWordsMenu
 
     # Past, present and future tense menu
@@ -84,6 +85,10 @@ def createGames():
     theHome = wordGame(THE_HOME, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, THE_HOME_GREETING)
     theHome.readCSV("csv\\germanWords\\theHome.csv", "english", "german")
     games[theHome.title] = theHome
+
+    body = wordGame(BODY, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, BODY_GREETING)
+    body.readCSV("csv\\germanWords\\body.csv", "english", "german")
+    games[body.title] = body
 
 
     # Tenses games
@@ -168,6 +173,9 @@ def findMenuOrGame(selection, menus, games):
         return menus[LEARN_GERMAN_WORDS_MENU]
     elif selection == CLOTHING:
         games[CLOTHING].playGame()
+        return menus[LEARN_GERMAN_WORDS_MENU]
+    elif selection == BODY:
+        games[BODY].playGame()
         return menus[LEARN_GERMAN_WORDS_MENU]
 
 
