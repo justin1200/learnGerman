@@ -19,31 +19,31 @@ LEARN_GERMAN_WORDS_MENU_INSTRUCTION = "what is it in German"
 
 GREETINGS = "Greetings"
 GREETINGS_GREETING = "In this game you are given English words and you have to write\n" + \
-            "it in English. The topic is greetings."
+            "it in German. The topic is greetings."
 
 THE_WORKPLACE = "The Workplace"
 THE_WORKPLACE_GREETING = "In this game you are given English words and you have to write\n" + \
-            "it in English. The topic is the workplace."
+            "it in German. The topic is the workplace."
 
 TRAVELLING = "Travelling"
 TRAVELLING_GREETING = "In this game you are given English words and you have to write\n" + \
-            "it in English. The topic is travelling."
+            "it in German. The topic is travelling."
 
 FOOD_EATING_AND_DRINKING = "Food, Eating and Drinking"
 FOOD_EATING_AND_DRINKING_GREETING = "In this game you are given English words and you have to write\n" + \
-            "it in English. The topic is food, eating and drinking."
+            "it in German. The topic is food, eating and drinking."
 
 THE_HOME = "The Home"
 THE_HOME_GREETING = "In this game you are given English words and you have to write\n" + \
-            "it in English. The topic is the home."
+            "it in German. The topic is the home."
 
 CLOTHING = "Clothing"
 CLOTHING_GREETING = "In this game you are given English words and you have to write\n" + \
-            "it in English. The topic is clothing."
+            "it in German. The topic is clothing."
 
 BODY = "Human body and health"
 BODY_GREETING = "In this game you are given English words and you have to write\n" + \
-            "it in English. The topic is the human body and the health."
+            "it in German. The topic is the human body and the health."
 #endregion
 
 #region tense

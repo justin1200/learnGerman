@@ -93,36 +93,36 @@ def createGames():
 
     # Tenses games
     perfect_past = wordGame(PERFECT_PAST, PERFECT_PAST_INSTRUCTION, PERFECT_PAST_GREETING)
-    perfect_past.readCSV("csv\\tense\\perfectPast.csv", "prefectPast", "word")
+    perfect_past.readCSV("csv\\tense\\perfectPast.csv", "word", "prefectPast")
     games[perfect_past.title] = perfect_past
 
     presentTenseErSieEs = wordGame(PRESENT_TENSE_ER_SIE_ES, PRESENT_TENSE_ER_SIE_ES_INSTRUCTION,
                                    PRESENT_TENSE_ER_SIE_ES_GREETING)
-    presentTenseErSieEs.readCSV("csv\\tense\\presentTenseErSieEs.csv", "presentTenseErSieEs", "word")
+    presentTenseErSieEs.readCSV("csv\\tense\\presentTenseErSieEs.csv", "word", "presentTenseErSieEs")
     games[presentTenseErSieEs.title] = presentTenseErSieEs
 
     simeplePast = wordGame(SIMPLE_PAST, SIMPLE_PAST_INSTRUCTION, SIMPLE_PAST_GREETING)
-    simeplePast.readCSV("csv\\tense\\simplePast.csv", "simplePast", "word")
+    simeplePast.readCSV("csv\\tense\\simplePast.csv", "word", "simplePast")
     games[simeplePast.title] = simeplePast
 
 
     # Cases games
     prepositions = wordGame(PREPOSITIONS, PREPOSITIONS_INSTRUCTION, PREPOSITIONS_GREETING)
-    prepositions.readCSV("csv\\cases\\prepositions.csv", "case", "preposition")
+    prepositions.readCSV("csv\\cases\\prepositions.csv", "preposition", "case")
     games[prepositions.title] = prepositions
 
     verbs = wordGame(VERBS, VERBS_INSTRUCTION, VERBS_GREETING)
-    verbs.readCSV("csv\\cases\\words.csv", "case", "word")
+    verbs.readCSV("csv\\cases\\words.csv", "word", "case")
     games[verbs.title] = verbs
 
 
     # Adjectives games
     superlative = wordGame(SUPERLATIVE, SUPERLATIVE_INSTRUCTION, SUPERLATIVE_GREETING)
-    superlative.readCSV("csv\\adjectives\\superlative.csv", "superlative", "word")
+    superlative.readCSV("csv\\adjectives\\superlative.csv", "word", "superlative")
     games[superlative.title] = superlative
 
     comparative = wordGame(COMPARATIVE, COMPARATIVE_INSTRUCTION, COMPARATIVE_GREETING)
-    comparative.readCSV("csv\\adjectives\\comparative.csv", "comparative", "word")
+    comparative.readCSV("csv\\adjectives\\comparative.csv", "word", "comparative")
     games[comparative.title] = comparative
 
     return games
@@ -139,7 +139,7 @@ def findMenuOrGame(selection, menus, games):
         mainMenuTemp = menus[MAIN_MENU]
         selectionTemp = mainMenuTemp.aboutPage()
         selectionTemp = mainMenuTemp.getSelectionName(selectionTemp)
-        return findMenuOrGame(selectionTemp, menus)
+        return findMenuOrGame(selectionTemp, menus, games)
 
 
     # Check menus first
