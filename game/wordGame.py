@@ -41,7 +41,7 @@ class wordGame(game):
 
         # Play game rounds until prompted to return to menu.
         while (answer != "*"):
-            num = self.getNum(0, len(self.answersByNumber))
+            num = self.getNum(0, len(self.answersByNumber) - 1)
             answer = self.playRound(num)
 
         return answer
