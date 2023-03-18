@@ -2,9 +2,7 @@
 
 ---
 
-Description
-
-Project files for console-based application to learn German with.
+Description: Project files for console-based application to learn German with.
 
 Author: Justin Kelley
 
