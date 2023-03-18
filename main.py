@@ -1,7 +1,12 @@
-# This is a sample Python script.
+# -*- coding: utf-8 -*-
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+"""
+This program allows an individual to practice their German grammar in a series of games including spelling, tense and cases.
+"""
+
+__author__ = 'Justin Kelley'
+__date__ = '18.03.2023'
+__version__ = 'V1000'
 
 from gameControl import *
 
