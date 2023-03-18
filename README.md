@@ -1,6 +1,7 @@
----
+#learnGerman
 
-Title: learnGerman
+--
+
 Description: Project files for console-based application to learn German with.
 Author: Justin Kelley
 
