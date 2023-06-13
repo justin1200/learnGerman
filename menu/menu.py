@@ -57,7 +57,7 @@ class menu:
     """Display the menu."""
     def displayMenu(self):
 
-        os.system('cls')
+        os.system('clear')
         print(SEPERATOR)
         print(str.upper(self.__title))
         print(SEPERATOR)

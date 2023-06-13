@@ -31,7 +31,7 @@ class mainMenu(menu):
     """Handles the showing of the about page of the program."""
     def aboutPage(self):
 
-        os.system('cls')
+        os.system('clear')
         print(SEPERATOR)
         print("Learn German")
         print(f"Author: {self.AUTHOR}, Version: {self.VERSION}, Date: {self.DATE}")

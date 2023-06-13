@@ -51,7 +51,7 @@ class wordGame(game):
     "Prints the welcome message of the game."
     def welcome(self):
 
-        os.system('cls')
+        os.system('clear')
         print(SEPERATOR)
         print(f"{str.upper(self.title)}")
         print(SEPERATOR)
@@ -73,7 +73,7 @@ class wordGame(game):
         while not correct:
             # Ask question and wait for answer
             correct = False
-            os.system('cls')
+            os.system('clear')
             answer = str(input(f"For {question_word}, {self.__instruction}.\n Use ! for special characters such as" +
                                f" 'a!' for ä. Press * to return to the game menu: "))
 

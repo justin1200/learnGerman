@@ -63,66 +63,66 @@ def createGames():
 
     # Learn German words games
     theWorkplace = wordGame(THE_WORKPLACE, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, THE_WORKPLACE_GREETING)
-    theWorkplace.readCSV("csv\\germanWords\\theWorkplace.csv", "english", "german")
+    theWorkplace.readCSV("csv/germanWords/theWorkplace.csv", "english", "german")
     games[theWorkplace.title] = theWorkplace
-
+    
     travelling = wordGame(TRAVELLING, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, TRAVELLING_GREETING)
-    travelling.readCSV("csv\\germanWords\\travelling.csv", "english", "german")
+    travelling.readCSV("csv/germanWords/travelling.csv", "english", "german")
     games[travelling.title] = travelling
 
     food = wordGame(FOOD_EATING_AND_DRINKING, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, FOOD_EATING_AND_DRINKING_GREETING)
-    food.readCSV("csv\\germanWords\\food.csv", "english", "german")
+    food.readCSV("csv/germanWords/food.csv", "english", "german")
     games[food.title] = food
 
     clothing = wordGame(CLOTHING, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, CLOTHING_GREETING)
-    clothing.readCSV("csv\\germanWords\\clothing.csv", "english", "german")
+    clothing.readCSV("csv/germanWords/clothing.csv", "english", "german")
     games[clothing.title] = clothing
 
     greetings = wordGame(GREETINGS, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, GREETINGS_GREETING)
-    greetings.readCSV("csv\\germanWords\\greetings.csv", "english", "german")
+    greetings.readCSV("csv/germanWords/greetings.csv", "english", "german")
     games[greetings.title] = greetings
 
     theHome = wordGame(THE_HOME, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, THE_HOME_GREETING)
-    theHome.readCSV("csv\\germanWords\\theHome.csv", "english", "german")
+    theHome.readCSV("csv/germanWords/theHome.csv", "english", "german")
     games[theHome.title] = theHome
 
     body = wordGame(BODY, LEARN_GERMAN_WORDS_MENU_INSTRUCTION, BODY_GREETING)
-    body.readCSV("csv\\germanWords\\body.csv", "english", "german")
+    body.readCSV("csv/germanWords/body.csv", "english", "german")
     games[body.title] = body
 
 
     # Tenses games
     perfect_past = wordGame(PERFECT_PAST, PERFECT_PAST_INSTRUCTION, PERFECT_PAST_GREETING)
-    perfect_past.readCSV("csv\\tense\\perfectPast.csv", "word", "prefectPast")
+    perfect_past.readCSV("csv/tense/perfectPast.csv", "word", "prefectPast")
     games[perfect_past.title] = perfect_past
 
     presentTenseErSieEs = wordGame(PRESENT_TENSE_ER_SIE_ES, PRESENT_TENSE_ER_SIE_ES_INSTRUCTION,
                                    PRESENT_TENSE_ER_SIE_ES_GREETING)
-    presentTenseErSieEs.readCSV("csv\\tense\\presentTenseErSieEs.csv", "word", "presentTenseErSieEs")
+    presentTenseErSieEs.readCSV("csv/tense/presentTenseErSieEs.csv", "word", "presentTenseErSieEs")
     games[presentTenseErSieEs.title] = presentTenseErSieEs
 
     simeplePast = wordGame(SIMPLE_PAST, SIMPLE_PAST_INSTRUCTION, SIMPLE_PAST_GREETING)
-    simeplePast.readCSV("csv\\tense\\simplePast.csv", "word", "simplePast")
+    simeplePast.readCSV("csv/tense/simplePast.csv", "word", "simplePast")
     games[simeplePast.title] = simeplePast
 
 
     # Cases games
     prepositions = wordGame(PREPOSITIONS, PREPOSITIONS_INSTRUCTION, PREPOSITIONS_GREETING)
-    prepositions.readCSV("csv\\cases\\prepositions.csv", "preposition", "case")
+    prepositions.readCSV("csv/cases/prepositions.csv", "preposition", "case")
     games[prepositions.title] = prepositions
 
     verbs = wordGame(VERBS, VERBS_INSTRUCTION, VERBS_GREETING)
-    verbs.readCSV("csv\\cases\\words.csv", "word", "case")
+    verbs.readCSV("csv/cases/words.csv", "word", "case")
     games[verbs.title] = verbs
 
 
     # Adjectives games
     superlative = wordGame(SUPERLATIVE, SUPERLATIVE_INSTRUCTION, SUPERLATIVE_GREETING)
-    superlative.readCSV("csv\\adjectives\\superlative.csv", "word", "superlative")
+    superlative.readCSV("csv/adjectives/superlative.csv", "word", "superlative")
     games[superlative.title] = superlative
 
     comparative = wordGame(COMPARATIVE, COMPARATIVE_INSTRUCTION, COMPARATIVE_GREETING)
-    comparative.readCSV("csv\\adjectives\\comparative.csv", "word", "comparative")
+    comparative.readCSV("csv/adjectives/comparative.csv", "word", "comparative")
     games[comparative.title] = comparative
 
     return games
